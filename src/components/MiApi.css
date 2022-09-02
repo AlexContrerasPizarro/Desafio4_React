@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+
+.contenedor {
+  display: grid;
+  grid-template:
+    'header header header header'
+    'menu menu menu menu'
+    ' main main main main'
+    'footer footer footer footer';
+  grid-gap: 10px;
+
+  padding: 10px;
+}
+
+.buscador {
+  grid-area: menu;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: url("/src/assets/bg2.jpeg");
+  height: 50px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.buscador p {
+  color: #fff;
+  text-align: center;
+  margin: 10px;
+
+}
+
+.contenedorAves {
+  grid-area: main;
+  padding: 0px 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 45px;
+  justify-items: center;
+
+}
+
+.card {
+  max-width: 300px;
+  max-height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-end-end-radius: 20px;
+}
+
+.card-title {
+  text-align: center;
+  color: #fff;
+  background-color: #4c303f;
+  padding: 2%;
+  margin: 0%;
+  border-top-left-radius: 20px;
+}
+
+.card-desc {
+  display: block;
+  font-size: 1.3rem;
+  position: absolute;
+  height: 0;
+  top: 0;
+  opacity: 0;
+  padding: 18px 8%;
+  background-color: white;
+  overflow-y: scroll;
+  transition: 0.8s ease;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-end-end-radius: 20px;
+}
+
+.card:hover .card-desc {
+  opacity: 1;
+  height: 100%;
+}
